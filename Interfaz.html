@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta - GYM de boxeo</title>
+    <link rel="stylesheet" href="Interfaz.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header class="encabezado">
+            <div class="logo">Boxeo</div>
+            <div>
+                <h1>Inscripción - GYM boxeo</h1>
+                <p class="formulario">Formulario para el alta de entrenamientos de boxeo</p>
+            </div>
+        </header>
+
+        <section class="tarjeta">
+            <form id="formularioBoxeo">
+                <label class="completo">
+                    Nombre completo
+                    <input type="text" id="nombre" required>
+                </label>
+
+                 <label>
+                    Nombre completo
+                    <input type="number" id="edad"  min="5" max="90" required>
+                </label>
+                <label>
+                    Género
+                    <select id="genero">
+                        <option value=""> Selecionar un género</option>
+                        <option>Masculino</option>
+                        <option>Femenino</option>
+                        <option>Prefiero no decirlo</option>
+                    </select>
+                </label>
+                <label>
+                    Experencia
+                    <select id="nivel">
+                        <option value=""> Seleecionar un nivel de experencia</option>
+                        <option>Principiante</option>
+                        <option>Intermedio</option>
+                        <option>Avanzado</option>
+                    </select>
+                </label>
+                <label>
+                    Foto de perfil
+                    <input type="file" id="foto" accept="image/*">
+                </label>
+                <label class="fila-check">
+                    <input type="checkbox" id="waiver" required>
+                    <div class="acepto">Acepto las politicas de seguridad</div>
+                </label>
+                
+            </form>
+        </section>
+    </div>
+</body>
+</html>
