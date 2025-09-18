@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-    <div class="contenedor">
+     <header class="cabecera-principal">
+        <div class="cabecera-logo" href="index.html">🥊 Boxeo GYM</div>
+        <nav class="cabecera-nav">
+            <a href="login.html">Login</a>
+            <a href="crearCuenta.html">Crear Cuenta</a>
+        </nav>
+    </header>
+    <div class="contenedor" >
         <header class="encabezado">
             <div class="logo">Boxeo</div>
             <h1>Acceso al GYM</h1>
@@ -23,10 +30,11 @@
                     Contraseña
                     <input type="password" id="password" required placeholder="Introduce tu contraseña">
                 </label>
-                <button type="submit">Entrar</button>
+                <button type="submit" href="index.html">Entrar</button>
                 <a href="crearCuenta.html" class="crear">¿No tienes cuenta creada?</a>
             </form>
         </section>
     </div>
+    <script src="../js/login.js"></script>
 </body>
 </html>
