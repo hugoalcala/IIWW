@@ -1,5 +1,89 @@
-/* header/*
+/*Global*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
+    color: #FFFFFF;
+    line-height: 1.6;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    height: 100%;
+}
+main{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* header*/
+header {
+  background: #7B2CBF; 
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
 
+header .contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+header .logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #00F5D4; 
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-/*footer/*
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem; 
+}
+
+header nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+header nav a:hover {
+  background: #9D4EDD; 
+  color: #00F5D4;    
+}
+/*footer*/
+footer {
+  background: #5A189A;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  margin-top: auto;
+}
+
+footer .contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
