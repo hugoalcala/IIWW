@@ -1,33 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Perfil</title>
-    <link rel="stylesheet" href="../css/styles.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil</title>
+  <link rel="stylesheet" href="../css/styles.css"> <!-- global -->
+  <link rel="stylesheet" href="../css/perfil.css"> <!-- solo perfil -->
 </head>
 <body>
-    <header>
-        <div class="contenedor">
-            <div class="logo">🎮 GamerZone</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="Login.html">Login</a></li>
-                    <li><a href="registro.html">Registro</a></li>
-                    <li><a href="perfil.html">Perfil</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="contenedor">
+  <header>
+    <div class="contenedor">
+      <div class="logo">🎮 GamerZone</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    </main>
-    <footer>
-        <div class="contenedor">
-            <p>&copy; 2025 GamerZone. Todos los derechos reservados.</p>
+  <main>
+    <section class="perfil">
+      <h1>Mi Perfil Gamer</h1>
+      <p>Edita tus datos y personaliza tu experiencia.</p>
+
+      <form id="perfilForm">
+        <!-- Fecha -->
+        <div class="input-group">
+          <label for="fecha-nacimiento">Fecha de nacimiento</label>
+          <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
         </div>
-    </footer>
+
+        <!-- Género -->
+        <div class="input-group">
+          <p>Género</p>
+          <label><input type="radio" name="genero" value="Hombre"> Hombre</label>
+          <label><input type="radio" name="genero" value="Mujer"> Mujer</label>
+          <label><input type="radio" name="genero" value="Otro"> Otro</label>
+        </div>
+
+        <!-- Selección múltiple -->
+        <div class="input-group">
+          <label for="juegos">Juegos favoritos</label>
+          <select id="juegos" name="juegos" multiple>
+            <option value="lol">League of Legends</option>
+            <option value="valorant">Valorant</option>
+            <option value="minecraft">Minecraft</option>
+            <option value="fifa">FIFA</option>
+            <option value="fortnite">Fortnite</option>
+            <option value="gta">GTA V</option>
+          </select>
+        </div>
+
+        <!-- Color -->
+        <div class="input-group">
+          <label for="color">Color favorito</label>
+          <input type="color" id="color" name="color" value="#6a0dad">
+        </div>
+
+        <!-- Archivo -->
+        <div class="input-group">
+          <label for="avatar">Subir avatar</label>
+          <input type="file" id="avatar" name="avatar" accept="image/*">
+        </div>
+
+        <!-- Rango -->
+        <div class="input-group">
+          <label for="nivel">Nivel de experiencia</label>
+          <input type="range" id="nivel" name="nivel" min="1" max="10" value="5">
+        </div>
+
+        <!-- URL -->
+        <div class="input-group">
+          <label for="canal">Enlace a tu canal / perfil</label>
+          <input type="url" id="canal" name="canal" placeholder="https://twitch.tv/tuusuario">
+        </div>
+
+        <!-- Hora -->
+        <div class="input-group">
+          <label for="hora-juego">Hora preferida para jugar</label>
+          <input type="time" id="hora-juego" name="hora-juego">
+        </div>
+        
+        <!-- Área de texto -->
+        <div class="input-group">
+          <label for="bio">Biografía</label>
+          <textarea id="bio" name="bio" rows="4" placeholder="Cuéntanos sobre ti..."></textarea>
+        </div>
+
+        <!-- Botones -->
+        <button type="button" class="btn" onclick="mostrarDatos()">Ver datos introducidos</button>
+      </form>
+
+      <!-- Contenedor oculto de datos -->
+      <div id="datosUsuario" class="datos-ocultos" style="display:none; margin-top:1.5rem; padding:1rem; background:#2a2a2a; border-radius:8px;">
+        <h3>Datos introducidos:</h3>
+        <ul id="listaDatos"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      <p>&copy; 2025 GamerZone. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/perfil.js">
+  </script>
 </body>
 </html>

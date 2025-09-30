@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
     <header>
@@ -13,16 +14,70 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="login.html">Login</a></li>
                     <li><a href="registro.html">Registro</a></li>
                     <li><a href="perfil.html">Perfil</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main class="contenedor">
-        
+
+    <main>
+    
+        <!-- SECCIÓN EXPLICACIÓN -->
+        <section class="explicacion">
+            <h2>¿Qué es GamerZone?</h2>
+            <p>
+                GamerZone es una plataforma diseñada para todos los apasionados de los videojuegos. 
+                Aquí podrás crear tu perfil gamer, guardar tus datos de juego, compartir tus preferencias, 
+                y descubrir nuevas experiencias junto a otros jugadores.  
+            </p>
+            <p>
+                Nuestro objetivo es ofrecerte un espacio donde puedas expresarte como gamer, elegir tu 
+                estilo de juego y mantener un registro de tus progresos en un entorno moderno y seguro. 
+            </p>
+        </section>
+
+        <!-- FORMULARIO DE PREFERENCIAS -->
+        <section class="form-container">
+            <h2>Tus Preferencias Gamer</h2>
+            <form action="perfil.html" method="POST">
+                
+                <div class="input-group">
+                    <label for="search">Buscar Juegos</label>
+                    <input type="search" id="search" name="search" placeholder="Escribe el nombre de un juego...">
+                </div>
+
+                <div class="input-group">
+                    <label for="platform">Plataforma Principal</label>
+                    <select id="platform" name="platform" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="pc">PC</option>
+                        <option value="xbox">Xbox</option>
+                        <option value="playstation">PlayStation</option>
+                        <option value="switch">Nintendo Switch</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <p>¿Qué tipo de jugador eres?</p>
+                    <label><input type="radio" name="playerType" value="casual"> Casual</label>
+                    <label><input type="radio" name="playerType" value="competitivo"> Competitivo</label>
+                    <label><input type="radio" name="playerType" value="streamer"> Streamer</label>
+                </div>
+
+                <div class="input-group">
+                    <p>¿Qué prefieres?</p>
+                    <label><input type="checkbox" name="preferences" value="online"> Online</label>
+                    <label><input type="checkbox" name="preferences" value="singleplayer"> Un jugador</label>
+                    <label><input type="checkbox" name="preferences" value="cooperativo"> Cooperativo</label>
+                </div>
+
+                <button type="submit" class="btn">Guardar preferencias</button>
+            </form>
+        </section>
     </main>
+
     <footer>
         <div class="contenedor">
             <p>&copy; 2025 GamerZone. Todos los derechos reservados.</p>
