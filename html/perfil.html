@@ -92,11 +92,14 @@
         </div>
 
         <!-- Botones -->
-        <button type="button" class="btn" onclick="mostrarDatos()">Ver datos introducidos</button>
+        <div class="botones-perfil">
+          <button type="button" id="btnGuardar" class="btn guardar">Guardar datos</button>
+          <button type="button" id="btnVer" class="btn ver">Ver datos introducidos</button>
+        </div>
       </form>
 
       <!-- Contenedor oculto de datos -->
-      <div id="datosUsuario" class="datos-ocultos" style="display:none; margin-top:1.5rem; padding:1rem; background:#2a2a2a; border-radius:8px;">
+      <div id="datosUsuario" class="datos-ocultos" style="display:none;">
         <h3>Datos introducidos:</h3>
         <ul id="listaDatos"></ul>
       </div>
@@ -109,7 +112,6 @@
     </div>
   </footer>
 
-  <script src="../js/perfil.js">
-  </script>
+  <script src="../js/videojuego.js"></script>
 </body>
 </html>
